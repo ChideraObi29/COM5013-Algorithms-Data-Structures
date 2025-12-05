@@ -1,3 +1,9 @@
 CREATING A CLOCK SYSTEM 
 This can be done by getting the current time and then printing it on the screen. This should be more efficient than creating a fake 
 time that would require more lines of codes and a variable that keeps have to change.
+
+CREATING SCHEDULES FOR TRAINS USING ARRAYS
+- I will set each train at a different station at the start of the program.
+- Stations: Waterloo, Euston, King's Cross, Paddington and Victoria.
+- Each station would have their own different distance in time.
+- I will store each schedule in arrays
