@@ -1,0 +1,14 @@
+I have created a code that displays the current date and time on a seperate python file and then added the code on
+the main app file.
+
+- THE CODE -
+#Displaying date and time
+import datetime
+
+current_time=datetime.datetime.now()
+print(current_time)
+------------------------------------------------------------------------------------------------------------------------------
+However, this prints the date as well so I rewrote the code so that it only prints the time, (Hour and seconds).
+
+import time
+print(time.strftime("%H:%M"))
