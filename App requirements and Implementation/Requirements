@@ -1,1 +1,13 @@
+Project Scope: Simulation of train arrivals and departures on Zone 1 of London Underground network. 
 
+Requirements
+
+- Live clock that displays the current time.
+
+- Schedule system for each train with departing and arrival time. The simulation would simulate in Zone 1 London only. 
+
+- Arrival system that logs every train arrival and displays them. 
+
+- Train delays system since it is a simulation
+
+- Passengers boarding.
