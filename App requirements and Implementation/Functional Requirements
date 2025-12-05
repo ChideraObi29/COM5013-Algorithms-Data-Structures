@@ -1,2 +1,3 @@
 CREATING A CLOCK SYSTEM 
-This can be done by getting the current time and then printing on the screen.
+This can be done by getting the current time and then printing it on the screen. This should be more efficient than creating a fake 
+time that would require more lines of codes and a variable that keeps have to change.
