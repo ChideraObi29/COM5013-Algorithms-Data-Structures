@@ -1,1 +1,10 @@
+//CODE NUMBER 1
+import random
+from datetime import datetime, timedelta
 
+all_trains = ["Train1","Train2","Train3","Train4","Train5"]
+all_stations = ["Waterloo","Euston","King's Cross","Paddington","Victoria"]
+train_travel_time = [2,4,5]
+
+for train in all_trains:
+    print((now := datetime.now()) and f"{train} / {(dep := random.choice(all_stations))} ---> {(arr := random.choice([s for s in all_stations if s != dep]))} / Depart: {now.strftime('%H:%M')} / Arrive: {(now + timedelta(minutes=random.choice(train_travel_time))).strftime('%H:%M')}")
