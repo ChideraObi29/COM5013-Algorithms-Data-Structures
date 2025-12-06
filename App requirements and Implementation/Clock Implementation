@@ -1,7 +1,6 @@
 I have created a code that displays the current date and time on a seperate python file and then added the code on
 the main app file.
-
-- THE CODE -
+//The Code
 #Displaying date and time
 import datetime
 
