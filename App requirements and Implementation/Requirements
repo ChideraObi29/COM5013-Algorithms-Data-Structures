@@ -8,6 +8,4 @@ Requirements
 
 - Arrival system that logs every train arrival and displays them. 
 
-- Train delays system since it is a simulation
-
-- Passengers boarding.
+- Train delays system 
