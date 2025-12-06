@@ -1,0 +1,27 @@
+//CODE 1
+
+import time
+from datetime import datetime
+
+schedule = [
+    ("22:02", "Display this on screen")
+]
+
+stored_values = []
+repeated = set()
+
+while True:
+    current_time = datetime.now().strftime("%H:%M")
+    
+    for target_time, message in schedule:
+        if current_time == target_time and target_time not in repeated:
+            stored_values.append(message)
+            repeated.add(target_time)
+            print(f"Event stored for {target_time}!")
+    
+    print("Show all trains arrivals")
+    user_input = input()
+    if user_input == "1":
+        print("Stored values:", stored_values)
+    
+    time.sleep(1)
