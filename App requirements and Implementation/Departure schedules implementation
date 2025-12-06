@@ -1,4 +1,5 @@
 //CODE NUMBER 1
+
 import random
 from datetime import datetime, timedelta
 
@@ -16,3 +17,41 @@ for train in all_trains:
     print(f"{train} / {dep_station} ---> {arr_station} / Depart: {current_time.strftime('%H:%M')} / Arrive: {(current_time + timedelta(minutes=travel_time)).strftime('%H:%M')}")
     
     current_time += timedelta(minutes=random.randint(5, 10))
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//CODE NUMBER 2
+
+def waterloo():
+    Waterloo_schedule = [
+        ("10:00","Train1","Euston","10:05")
+        ]
+    for leave, train, destination, arrive in Waterloo_schedule:
+        print(leave,train,"--->",destination,arrive)
+    #------------------------------------------------------
+def esuton():
+    Euston_schedule = [
+        ("10:05","Train1","king's Cross","10:10")
+        ]
+    for leave, train, destination, arrive in Euston_schedule:
+        print(leave,train,"--->",destination,arrive)
+    #----------------------------------------------------
+
+def kingsCross():
+    kingsCross_schedule= [
+        ("10:10","Train1","Paddington","10:15")
+        ]
+    for leave, train, destination, arrive in kingsCross_schedule:
+        print(leave,train,"--->",destination,arrive)
+    #--------------------------------------------------------
+
+def paddington():
+    Paddington_schedule = [
+        ("10:15","Train1","Victoria","10:20")
+        ]
+    for leave, train, destination, arrive in Paddington_schedule:
+        print(leave,train,"--->",destination,arrive)
+#-------------------------------------------------------------
+def victory():
+    Victoria_schedule = [
+        ("10:20","Train1","","10:25")
+        ]
+    for leave, train, destination, arrive in Victoria_schedule:print(leave,train,"--->",destination,arrive)
