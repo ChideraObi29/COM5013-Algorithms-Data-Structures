@@ -2,7 +2,7 @@ import time
 from datetime import datetime
 
 #DEPARTURES SCHEDULES
-def waterloo():
+def Waterloo():
     Waterloo_schedule = [
         ("14:00","Train1","Euston","14:10"),    
         ("14:10","Train2","Euston","14:20"),        
@@ -23,7 +23,7 @@ def waterloo():
     for leave, train, destination, arrive in Waterloo_schedule:
         print(leave,train,"--->",destination,arrive)
     #------------------------------------------------------
-def euston():
+def Euston():
     Euston_schedule = [
         ("14:10","Train1","King's Cross","14:20"),        
         ("14:20","Train2","King's Cross","14:30"),        
@@ -45,7 +45,7 @@ def euston():
         print(leave,train,"--->",destination,arrive)
     #----------------------------------------------------
 
-def kingsCross():
+def KingsCross():
     kingsCross_schedule= [
         ("14:20","Train1","Paddington","14:30"),        
         ("14:30","Train2","Paddington","14:40"),       
@@ -67,7 +67,7 @@ def kingsCross():
         print(leave,train,"--->",destination,arrive)
     #--------------------------------------------------------
 
-def paddington():
+def Paddington():
     Paddington_schedule = [
         ("14:30","Train1","Victoria","14:40"),        
         ("14:40","Train2","Victoria","14:50"),        
@@ -89,7 +89,7 @@ def paddington():
     for leave, train, destination, arrive in Paddington_schedule:
         print(leave,train,"--->",destination,arrive)
 #-------------------------------------------------------------
-def victoria():
+def Victoria():
     Victoria_schedule = [
         ("14:40","Train1","Waterloo","14:50"), 
         ("14:50","Train2","Waterloo","15:00"), 
@@ -139,15 +139,15 @@ schedule = [("14:10","Train1 Arrived at Euston"),
 
 arrived = []
 
-def TrainArrivalCheck():
+def arrival_check():
     current_time = datetime.now().strftime("%H:%M")
     for target_time, message in schedule:
         if current_time == target_time and message not in arrived:
             arrived.append(message)
 
-def DisplayTrainArrvied():
+def Display_trains_arrived():
     if arrived:
-        print("Trains arrvied so far:")
+        print("Trains arrived so far:")
         for msg in arrived:
             print(f"- {msg}")
     else:
@@ -159,7 +159,7 @@ print("---------------------------------------")#TO LEAVE SPACE, SO IT IS MORE R
 
 #MAIN MENU OF APP
 #SHOWS ALL THE STATIONS AVAILABLE
-def StationOptions():
+def Station_options():
     print ( "Select which station for departure" )
     print("1. Waterloo")
     print("2. Euston")
@@ -169,47 +169,47 @@ def StationOptions():
     station_selector = float(input("Enter Station Number "))
     if station_selector==1:
         print("---------------------------------------")
-        waterloo()
+        Waterloo()
         print("---------------------------------------")
-        HomeMenu()
+        Home_menu()
     elif station_selector==2:
         print("---------------------------------------")
-        euston()       
+        Euston()       
         print("---------------------------------------")
-        HomeMenu()
+        Home_menu()
     elif station_selector==3:
         print("---------------------------------------")
-        kingsCross()       
+        KingsCross()       
         print("---------------------------------------")
-        HomeMenu()
+        Home_menu()
     elif station_selector==4:
         print("---------------------------------------")
-        paddington()       
+        Paddington()       
         print("---------------------------------------")
-        HomeMenu()
+        Home_menu()
     elif station_selector==5:
         print("---------------------------------------")
-        victoria()       
+        Victoria()       
         print("---------------------------------------")
-        HomeMenu()
+        Home_menu()
     else:
         print("INVALID NUMBER")
         print("---------------------------------------")
-        HomeMenu()
+        Home_menu()
 
 #SHOWING THE CURRENT TIME
-def TimeShow():
-    print("- Current Time (GMT) -")
+def Time_show():
+    print("- Current Time -")
     print(time.strftime("%H:%M"))
     print("---------------------------------------")
-    HomeMenu()
+    Home_menu()
 
 #EXITING THE APP
 def Exit():
     print("Bye")
 
 #HOME MENU OPTIONS
-def HomeMenu():
+def Home_menu():
     print("1. View Departures")
     print("2. View Arrivals")
     print("3. View Current Time")
@@ -217,20 +217,20 @@ def HomeMenu():
     menu_number_selector = float(input("Choose an option: "))
     if menu_number_selector ==1:
         print("---------------------------------------") 
-        StationOptions()
+        Station_options()
     elif menu_number_selector==3:
-        TimeShow()
+        Time_show()
     elif menu_number_selector ==4:
         Exit()
     elif menu_number_selector ==2: 
         print("---------------------------------------") 
-        TrainArrivalCheck()
-        DisplayTrainArrvied()
+        arrival_check()
+        Display_trains_arrived()
         print()
-        HomeMenu()
+        Home_menu()
     else:
         print("INVALID NUMBER")
         print("---------------------------------------")
-        HomeMenu()
+        Home_menu()
 
-HomeMenu()
+Home_menu()
