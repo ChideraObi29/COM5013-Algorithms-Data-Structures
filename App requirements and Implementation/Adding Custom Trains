@@ -20,3 +20,44 @@ def custom_trains():
     print(f"Train added to schedule!")
     print("---------------------------------------")
     Home_menu()
+------------------------------------------------------------------------------------------------------------------------------
+//CODE NUMBER 2 - IMPROVED VERSION
+
+def custom_trains():
+
+    allowed_stations = ["Waterloo", "Euston", "King's Cross", "Paddington", "Victoria"]
+
+    name = input("Enter a name of your train: ").strip()
+    time_input = input("Enter the arrival time for your train:").strip()
+    leave_from = input("Enter starting station: ").strip()
+
+    if leave_from not in allowed_stations:
+        print("Station must be one of:", allowed_stations)
+        print("---------------------------------------")
+        Home_menu()
+        return
+
+    arrive_at = input("Enter destination station: ").strip()
+
+    if arrive_at not in allowed_stations:
+        print("Station must be one of:", allowed_stations)
+        print("---------------------------------------")
+        Home_menu()
+        return
+
+    try:
+        dt = datetime.strptime(time_input, "%H:%M")
+        time_norm = dt.strftime("%H:%M")
+    except ValueError:
+        print("Invalid time format. Example: 14:26")
+        print("---------------------------------------")
+        Home_menu()
+        return
+
+    message = f"{name} from {leave_from} arrived at {arrive_at} at {time_input}"
+
+    schedule.append((time_norm, message))
+
+    print("Train added to schedule!")
+    print("---------------------------------------")
+    Home_menu()
