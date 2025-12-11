@@ -25,3 +25,16 @@ while True:
         print("Stored values:", stored_values)
     
     time.sleep(1)
+------------------------------------------------------------------------------------------------------------------------------
+//CODE 2
+all_trains_arrivals = [("15:28","Display this in terminal")]
+
+def arrivals_check():
+    current_time = datetime.now().strftime("%H:%M")
+    found = False
+    for target_time, message in all_trains_arrivals:
+        if current_time == target_time:
+            print(f"It's {current_time} Message: {message}")
+            found = True
+    if not found :
+        print(f"No trains have arrived at {current_time}")
