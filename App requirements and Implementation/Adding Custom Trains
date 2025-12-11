@@ -1,0 +1,22 @@
+//CODE FOR ADDING TRAINS IN THE SCHEDULE LIST
+
+#ADDING CUSTOM TRAINS
+def custom_trains():
+    name = input("Enter a name of your train: ")
+    time = input("Enter the arrival time for your train: ")
+    leave_from = input("Enter a starting station: ")
+    arrive_at = input("Enter station destination: ") 
+    try:
+        dt = datetime.strptime(time, "%H:%M")
+        time_norm = dt.strftime("%H:%M")
+    except ValueError:
+        print("Invalid time format. (Example 14:26)")
+        print("---------------------------------------")
+        Home_menu()
+
+    message = f"{time} {name} from {leave_from} arrived at {arrive_at}"
+
+    schedule.append((time_norm, message))
+    print(f"Train added to schedule!")
+    print("---------------------------------------")
+    Home_menu()
